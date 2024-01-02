@@ -8,24 +8,24 @@ const AddTesti = () => {
     const [asalInstansi, setasalInstansi] = useState<string>()
     const [testimoni, settestimoni] = useState<string>()
     const [image, setimage] = useState<string>()
-
-    const nameHandleChange = (event) => {
+    
+    const nameHandleChange = (event: any) => {
         setNama(event.target.value);
     }
 
-    const emailHandleChange = (event) => {
+    const emailHandleChange = (event: any) => {
         setemail(event.target.value);
     }
 
-    const asalInstansiHandleChange = (event) => {
+    const asalInstansiHandleChange = (event: any) => {
         setasalInstansi(event.target.value);
     }
 
-    const testimoniHandleChange = (event) => {
+    const testimoniHandleChange = (event: any) => {
         settestimoni(event.target.value);
     }
 
-    const imageHandleChange = (event) => {
+    const imageHandleChange = (event: any) => {
         setimage(event.target.value);
     }
 
@@ -36,10 +36,13 @@ const AddTesti = () => {
         testimoni: testimoni,
         image: image
     }
-
+    
     function dataSubmit() {
         axios.post('https://65938d171493b0116068ae94.mockapi.io/api-arkatama/user-data/data', data)
-        .then(response => location.reload())
+        .then(response => {
+            console.log(response)
+            location.reload()
+        })
         .catch(err => console.log(err))
     }
     
