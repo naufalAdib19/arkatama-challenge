@@ -4,23 +4,23 @@ import AddTesti from './assets/component/molecules/AddTesti'
 
 function App() {
   return (
-    <>  
-      <div className='h-screen flex items-center px-8 gap-x-20'>
-        <div className='testi-list-container  max-h-[400px] w-1/2 overflow-scroll shadow-md'>
+    <div className='bg-blue-50 pb-24'>
+      <div className='h-screen flex flex-col justify-center lg:flex-row items-center px-8 gap-x-20 gap-y-12'>
+        <div className='testi-list-container max-h-[400px] w-full md:w-1/2 overflow-scroll shadow-md bg-white'>
           <TestimonyList/>
         </div>
-        <div className='w-1/2'>
+        <div className='w-full md:w-1/2 bg-white'>
           <DetailTestimoni/>
         </div>
       </div>
-      <div className='w-full mb-24 max-w-[1000px] mx-auto'>
+      <div className='w-full max-w-[1000px] mx-auto'>
         <h1 className='text-center font-bold text-3xl'>Add Testimoni</h1>
-        <div className='px-12 shadow-md'>
+        <div className='px-12 shadow-md bg-white mt-8'>
           <AddTesti/>
         </div>
         
       </div>
-    </>
+    </div>
   )
 }
 

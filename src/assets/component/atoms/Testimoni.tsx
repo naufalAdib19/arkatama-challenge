@@ -22,9 +22,9 @@ const Testimoni = ({props}: {props: propsType}) => {
     }
 
     return (
-        <div className="flex justify-between items-center cursor-pointer">
+        <div className="flex justify-between items-center cursor-pointe w-full">
             <div className="px-4 py-2 flex items-center gap-x-5" onClick={onClick}>
-                <div className="min-w-[120px]">
+                <div className="min-w-[80px] lg:min-w-[120px]">
                     <div>{props.image}</div>
                 </div>
                 <div>
@@ -33,7 +33,7 @@ const Testimoni = ({props}: {props: propsType}) => {
                     <p>{props.testimoni}</p>
                 </div>
             </div>
-            <div className="cursor-pointer" onClick={onDelete}>
+            <div className="cursor-pointer bg-red-500 text-white px-4 py-1 rounded" onClick={onDelete}>
                 delete
             </div>
         </div>

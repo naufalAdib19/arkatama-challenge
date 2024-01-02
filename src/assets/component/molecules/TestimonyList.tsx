@@ -23,7 +23,9 @@ const TestimonyList = () => {
     }, [])
 
     return (
-    <div className="h-full w-1/2 ">
+    <div className="h-full w-full px-2 md:px-12 py-3">
+        <h1 className='font-semibold text-lg md:text-2xl text-center'>Testimoni List</h1>
+        <hr className='border border-black my-3'/>
         <div>
             {
                 data.map((data) => {
