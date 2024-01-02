@@ -21,6 +21,14 @@ const Testimoni = ({props}: {props: propsType}) => {
         })
     }
 
+    function truncateString(inputString: string, maxLength: number): string {
+        if (inputString.length > maxLength) {
+          return inputString.substring(0, maxLength - 3) + '...';
+        } else {
+          return inputString;
+        }
+      }
+
     return (
         <div className="flex justify-between items-center cursor-pointe w-full">
             <div className="px-4 py-2 flex items-center gap-x-5" onClick={onClick}>
@@ -30,7 +38,7 @@ const Testimoni = ({props}: {props: propsType}) => {
                 <div>
                     <p className="font-semibold">{props.nama}</p>
                     <p className="italic font-light">{props.asal_instansi}</p>
-                    <p>{props.testimoni}</p>
+                    <p>{truncateString(props.testimoni, 30)}</p>
                 </div>
             </div>
             <div className="cursor-pointer bg-red-500 text-white px-4 py-1 rounded" onClick={onDelete}>

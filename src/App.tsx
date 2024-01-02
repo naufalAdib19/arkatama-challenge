@@ -4,8 +4,8 @@ import AddTesti from './assets/component/molecules/AddTesti'
 
 function App() {
   return (
-    <div className='bg-blue-50 pb-24'>
-      <div className='h-screen flex flex-col justify-center lg:flex-row items-center px-8 gap-x-20 gap-y-12'>
+    <div className='bg-blue-100 pb-24'>
+      <div className='h-screen flex flex-col justify-center lg:flex-row items-center px-8 gap-x-12 gap-y-12'>
         <div className='testi-list-container max-h-[400px] w-full md:w-1/2 overflow-scroll shadow-md bg-white'>
           <TestimonyList/>
         </div>
